@@ -1,0 +1,8 @@
+---
+
+- name: Gather and list facts
+  hosts: all
+  roles:
+  - role: findpkg
+
+

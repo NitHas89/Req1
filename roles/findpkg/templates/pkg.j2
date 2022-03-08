@@ -1,0 +1,6 @@
+{% for host in groups['all'] %}
+{{ hostvars[host]['ansible_hostname']  }} 
+{%for pkg in hostvars[host]['ansible_facts']['packages']%}
+  {{pkg}} {{hostvars[host]['ansible_facts']['packages'][pkg][0]['version']}}
+{%endfor%}
+{% endfor %}

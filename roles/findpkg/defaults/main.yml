@@ -1,0 +1,13 @@
+---
+# defaults file for findpkg
+supported_os:
+  RedHat:
+    version:
+    - "7"
+    - "8"
+  Debian:
+    version:
+    - "18"
+    - "20"
+dest_dir: "/tmp"   
+  
