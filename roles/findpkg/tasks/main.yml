@@ -4,7 +4,10 @@
     package_facts:
       manager: auto
     when: ( ansible_facts['os_family'] == "RedHat" and ansible_facts['distribution_major_version'] in supported_os.RedHat.version ) or
-          ( ansible_facts['os_family'] == "Ubuntu" and ansible_facts['distribution_major_version'] in supported_os.Debian.version )
+          ( ansible_facts['os_family'] == "Debian" and ansible_facts['distribution_major_version'] in supported_os.Debian.version )
+  - name: print facts
+    debug:
+      var: ansible_facts['packages']
 
   - name: Extract information
     delegate_to: localhost
